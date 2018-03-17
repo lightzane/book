@@ -1,0 +1,22 @@
+@font-face {font-family: "Roboto"; src: url("../fonts/Roboto-Regular.ttf"); }
+@font-face {font-family: "Roboto Condensed"; src: url("../fonts/RobotoCondensed-Regular.ttf"); }
+@font-face {font-family: "RS"; src: url("../fonts/RobotoSlab-Regular.ttf"); }
+@font-face {font-family: "Roboto Mono"; src: url("../fonts/RobotoMono-Regular.ttf"); }
+@font-face {font-family: "ASL"; src: url("../fonts/Anabelle Script Light.ttf"); }
+
+*, html, body {
+	font-family: "Roboto", "Arial";
+}
+html, body {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+h1 {
+	font-family: "Roboto Condensed";
+}
+p {
+	word-wrap: break-word;
+}

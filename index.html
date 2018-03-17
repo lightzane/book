@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url"                content="https://timelights.github.io/book" />
+	<meta property="og:type"               content="website" />
+	<meta property="og:title"              content="Read Or Create Stories And Novels | Book - Timelights" />
+	<meta property="og:description"        content="A simple book alike feel and look in a web application for reading text especially stories or novels." />
+	<meta property="og:image"              content="https://timelights.github.io/book/pages/lastfantasy.png" />
+	<title>Book | Timelights</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+
+	<div id="sample">
+		<div class="load"></div>
+		<div class="text">
+		=author("Timelights")
+		=title("Last Fantasy")
+		=synopsis("A known song by IU (아이유)")
+
+		((pages/01.svg))=image
+		((pages/02.svg))=image
+		((pages/03.svg))=image
+		((pages/04.svg))=image
+		((pages/05.svg))=image
+		((pages/06.svg))=image
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/book.js"></script>
+	<script>
+		
+			$('#sample').book()
+
+	</script>
+</body>
+</html>
