@@ -187,6 +187,8 @@ Follow these guidelines if you are to create a text image as pages:
 - Create **outlines** to convert the text to vector for scalability
 - **Roboto Slab** (Light) font face used
 
+[//]: # ( Source Hans Serif - Korean Hangul font / 본명조 Light = 20pt)
+
 Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly)
 
 <br>
@@ -208,5 +210,5 @@ email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 
 [//]: # ( Adobe Illustrator ! )
 
-[//]: # ( Source Hans Serif - Korean Hangul font)
+
 [//]: # (Other font: https://github.com/adobe-fonts/source-han-serif/blob/release/OTF/Korean/SourceHanSerifK-Light.otf)
