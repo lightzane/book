@@ -148,10 +148,11 @@ Use ```Letter``` or ```A4``` sizes of paper template for the images.
 Follow these guidelines if you are to create a text image as pages:
 - **Artboard Size** - ```360px``` ```640px```
 - **Transparent** background
-- **Font size** - ```18pt```
-- **Indent size** - ```36pt``` (2x font size)
+- **Font size** - ```16pt```
+- **Indent size** - ```32pt``` (2x font size)
 - **Margin** - less than 10% of artboard size
-- Create **outlines** to convert the text to path for scalability
+- Create **outlines** to convert the text to vector for scalability
+- **Roboto Slab** (Light) font face used
 
 Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly)
 
@@ -168,5 +169,6 @@ email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 [//]: # (#LastFantasy = #e55e88 #61c4e4 -- Hot Pink and Light Blue !!!NOTE!!! This is my own!)
 [//]: # (#PacificDream = #34e89e #0f3443 -- Light Green and Dark Teal)
 
-[//]: # (if pure text image, get size from mydevice.io)
+[//]: # (if pure text image, get size from mydevice.io - 360px 640px)
 [//]: # (if not pure text image, get size from viewportsizes.com/mine or look at book.js //viewport sizes )
+[//]: # (viewport = 360px 560px )
