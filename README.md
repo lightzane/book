@@ -1,25 +1,23 @@
 # Book
 Turns HTML contents into a simple book.
 <br>
-A simple book alike feel and look in a web application for reading text especially stories or novels.\
-Started the project by prioritizing **display** in _mobile_ apps.\
+A simple book alike feel and look in a web application for reading text especially stories or novels.<br>
+Started the project by prioritizing **display** in _mobile_ apps.<br>
 <br>
 
 >**Purpose**: Hope **booklovers** will love
 
 <br>
 
-```Book``` plugin made by **JP Aguilar**\
+```Book``` plugin made by **JP Aguilar**
 email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 <br>
 
 #### MOBILE FIRST
-The display is first optimized for mobile devices.\
-Hence, not yet optimized for desktop.\
+The display is first optimized for mobile devices.<br>
+Hence, not yet optimized for desktop.<br>
 Still in development...
 <br>
-
-
 
 ## # Features
 
@@ -79,7 +77,7 @@ Put this below ```<script src="js/book.js"></script>```
 <br>
 
 ## # HTML Skeleton
-The ```Book``` plugin's targeted DOM (in this case: ```#sample```) will always have a ```width=100%``` and ```height=100%```\
+The ```Book``` plugin's targeted DOM (in this case: ```#sample```) will always have a ```width=100%``` and ```height=100%```<br>
 So just wrap it up in another container to control your own ```width``` and ```height```.
 ```html
 <div id="sample">
@@ -89,7 +87,7 @@ So just wrap it up in another container to control your own ```width``` and ```h
 	</div>
 </div>
 ```
-**IMPORTANT**\
+**IMPORTANT**<br>
 Your **Content** must follow the template that the ```Book``` can recognize.
 <br>
 
@@ -124,6 +122,7 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 	But you can force this contents to a new page by using a blank header.
 
 	((img/page.png))=image
+	((img/page.png))=image=nopage <!-- do not show the page number for this image page -->
 
 	Another alternative for the cover is the "image" parameter.
 	And the values inside the parameter should be the image URL.
@@ -139,9 +138,27 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 - Prefer to use transparent background when your image contains only text or typography
 <br>
 
+# IMPORTANT NOTES !!!
+**_DO NOT ENTER TOO MUCH CONTENT_**<br>
+The code was to loop to each word. Too many words may cause the application to hang.<br>
+For now, make images if text is too much. This will prevent the code to loop and cause lag.<br>
+Use ```Letter``` or ```A4``` sizes of paper template for the images.
 
+## # Text Images (SVG) - Guidelines
+Follow these guidelines if you are to create a text image as pages:
+- **Artboard Size** - ```360px``` ```640px```
+- **Transparent** background
+- **Font size** - ```18pt```
+- **Indent size** - ```36pt``` (2x font size)
+- **Margin** - less than 10% of artboard size
+- Create **outlines** to convert the text to path for scalability
 
-```Book``` plugin made by **JP Aguilar**\
+Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly)
+
+<br>
+<br>
+
+```Book``` plugin made by **JP Aguilar**
 email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 
 [//]: # ( N O T E S  - T O -  D E V E L O P E R )
