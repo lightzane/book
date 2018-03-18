@@ -157,8 +157,8 @@
 	text-align:center;
 }
 
-/*hide page number for image.nopage and cover contents*/
-.timelights-book .content.image.nopage .page-number,
+/*hide page number for image and cover contents*/
+.timelights-book .content.image .page-number,
 .timelights-book .content.cover .page-number {
 	position:absolute;
 	bottom:1em;
@@ -172,8 +172,8 @@
 	display: none;
 }
 
-/*add page number for image:not(.nopage) */
-.timelights-book .content.image:not(.nopage) .page-number {
+/*add page number for image:not(.nope) */
+.timelights-book .content.image:not(.nope) .page-number {
 	display: block;
 }
 

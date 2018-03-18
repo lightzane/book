@@ -9,7 +9,7 @@ Started the project by prioritizing **display** in _mobile_ apps.<br>
 
 <br>
 
-```Book``` plugin made by **JP Aguilar**
+```Book``` plugin made by **JP Aguilar**<br>
 email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 <br>
 
@@ -83,7 +83,7 @@ So just wrap it up in another container to control your own ```width``` and ```h
 <div id="sample">
 	<div class="load"></div>
 	<div class="text">
-		<!-- Your Content Template Goes Here! -->
+		<!-- Your Text Content Template Goes Here! -->
 	</div>
 </div>
 ```
@@ -92,6 +92,39 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 <br>
 
 ## # Content Template
+
+There are 2 types of content:
+- Image *(default)*
+- Text
+
+### Image Text as Content
+Contents must contain ```<img>``` 
+```html
+<div id="sample">
+	<div class="load"></div>
+	<div class="text">
+		<!-- These 3 are OPTIONAL -->
+		=title("Your book title") 				<!-- default: "Untitled" -->
+		=author("Book author") 					<!-- default: "Anonymous" -->
+		=synopsis("About the book summary...") 	<!-- default: BLANK and will not be displayed -->
+	</div>
+	<img src="image-url-01.svg" data-page-number="nope"> <!-- no page number -->
+	<img src="image-url-02.svg">
+	<img src="image-url-03.svg">
+</div>
+```
+
+**NOTE**
+- The image that will be provided will vary in size and may not cover the whole page.
+- Prefer to use transparent background when your image contains only text or typography.
+<br>
+
+### Text as Content
+Contents will not read ```<img>``` tag, but still can display an image as a page.
+```javascript
+$('#sample').book({ imageText : false })
+```
+
 ```html
 <div class="text">
 
@@ -122,7 +155,7 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 	But you can force this contents to a new page by using a blank header.
 
 	((img/page.png))=image
-	((img/page.png))=image=nopage <!-- do not show the page number for this image page -->
+	((img/page.png))=image
 
 	Another alternative for the cover is the "image" parameter.
 	And the values inside the parameter should be the image URL.
@@ -133,6 +166,7 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 
 </div>
 ```
+
 **NOTE**
 - The image that will be provided will vary in size and may not cover the whole page.
 - Prefer to use transparent background when your image contains only text or typography
@@ -141,8 +175,7 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 # IMPORTANT NOTES !!!
 **_DO NOT ENTER TOO MUCH CONTENT_**<br>
 The code was to loop to each word. Too many words may cause the application to hang.<br>
-For now, make images if text is too much. This will prevent the code to loop and cause lag.<br>
-Use ```Letter``` or ```A4``` sizes of paper template for the images.
+For now, make images if text is too much. This will prevent the code to loop or cause lag.<br>
 
 ## # Text Images (SVG) - Guidelines
 Follow these guidelines if you are to create a text image as pages:
@@ -159,7 +192,7 @@ Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly
 <br>
 <br>
 
-```Book``` plugin made by **JP Aguilar**
+```Book``` plugin made by **JP Aguilar**<br>
 email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 
 [//]: # ( N O T E S  - T O -  D E V E L O P E R )
@@ -172,3 +205,8 @@ email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 [//]: # (if pure text image, get size from mydevice.io - 360px 640px)
 [//]: # (if not pure text image, get size from viewportsizes.com/mine or look at book.js //viewport sizes )
 [//]: # (viewport = 360px 560px )
+
+[//]: # ( Adobe Illustrator ! )
+
+[//]: # ( Source Hans Serif - Korean Hangul font)
+[//]: # (Other font: https://github.com/adobe-fonts/source-han-serif/blob/release/OTF/Korean/SourceHanSerifK-Light.otf)
