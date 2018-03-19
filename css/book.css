@@ -265,10 +265,11 @@
 	overflow-y: scroll;
 	/*text-align: justify;*/
 	/*text-align-last: center;*/
+	margin-top:5px;
 }
 
 .timelights-book .misc-content .synopsis.field-value::-webkit-scrollbar {
-	width: 10px;
+	width: 0.2em;
 }
 
 .timelights-book .misc-content .synopsis.field-value::-webkit-scrollbar-thumb {
@@ -282,13 +283,14 @@
 	display: none;
 	outline: none;
 	color:#333;
-	border-radius: 2px;
+	border-radius: 3px;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	/*border-top: 2px solid #2ecc71;*/
-	padding: 0 7px;
-	
+	/*padding: 0 7px;*/
+	padding: 5px 20px;
 	position: relative;
 	overflow: hidden;
+	text-align: center;
 	font-size: 1.3em;
 }
 
@@ -301,7 +303,7 @@
 	right: 0;
 	bottom: 9%;
 
-	width: 35%;
+	width: 35%; max-width: 190px;
 	padding: 3px 5px;
 	font-size: 1.5em;
 	outline: none;
@@ -321,30 +323,8 @@
 
 	background-position: center;
 	background: #47a7f5;
-	overflow: hidden;
-}
-/*.timelights-book .read:active > .ripple-wave {
-	animation: ripple 2s;
 }
 
-.timelights-book .ripple-wave {
-	position: absolute;
-	top: 0; bottom:0;
-	left: -50%; right: -50%;
-	margin: auto;
-	width: 200%;
-	height: 300%;
-	background-color: #fff;
-	opacity: 0.5;
-	border-radius: 300px;
-	transform: scale(0);
-}
-
-@keyframes ripple {
-	0% {transform: scale(0);}
-	15%{transform: scale(1);}
-	100%{transform: scale(1);opacity:0;}
-}*/
 .ripple {
 	position: relative;
 	overflow: hidden;
@@ -354,14 +334,14 @@
 	content: '';
 	position: absolute;
 	top:0;
-	left:-50%;
-	right:-50%;
+	left:-10em;
+	right:-10em;
 	bottom:0;
 	margin: auto;
-	width: 100%;
-	height: 250%;
+	width: 10em;
+	height: 10em;
 	border-radius: 100%;
-	opacity: 0.7;
+	opacity: 0.5;
 	transform:scale(0);
 	background:#fff;
 }
@@ -370,12 +350,22 @@
 	background:#333;
 }
 
-.ripple:active:before {
-	animation: ripple-effect 1s;
+.ripple:not(:active):before {
+	animation: ripple-effect 1s ease-out;
 }
 
 @keyframes ripple-effect {
 	0% { transform: scale(0); }
-	15% { transform: scale(1); }
-	100% { transform: scale(1); }
+	20% { transform: scale(1); }
+	100% { transform: scale(1); opacity: 0; } /* add opacity 0 for fading effect */
+}
+
+/* fixes initial animation run, without user input, on page load */
+/* if you did not add the following below, ripple will auto play */
+.ripple:before {
+	visibility: hidden;
+}
+
+.ripple:focus:before {
+	visibility: visible;
 }
