@@ -201,10 +201,11 @@
 	height: 100%;
 	padding: 0;
 	margin: 0;
-
-	color:#fefeff;
-	background: #57606f;
-
+	/*color:#fefeff;*/ /* light font */
+	/*background: #57606f;*/ /* dark background */
+	background: #eee;
+	/*color: #57606f;*/
+	color: #333;
 	transition: transform 0.3s ease-out;
 	/*transform: translateY(100%);*/
 }
@@ -222,8 +223,8 @@
 .timelights-book .misc .progress .bar {
 	width:0%;
 	height: 100%;
-	background:#3498db;
-
+	/*background:#3498db; */ /*darkblue*/
+	background: #7ed6df;
 	transition: width 0.5s;
 }
 
@@ -232,7 +233,8 @@
 	height: 10%;
 	margin: 0;
 	padding: 0;
-	background: #2f3542;
+	/*background: #2f3542;*/ /*dark background*/
+	background:#ddd;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	text-align: center;
 	cursor:pointer;
@@ -245,19 +247,24 @@
 
 .timelights-book .misc-content .field {
 	font-family:'Roboto Condensed','Arial';
-	font-size: 0.7em;
+	font-size: 1em;
 	color: #a4b0be;
+	text-align: center;
 }
 
 .timelights-book .misc-content .field-value {
-	font-family:'Roboto','Arial';
-	font-size: 1em;
+	font-family:'Roboto Condensed','Arial';
+	font-size: 1.7em;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: -7px;
 }
 
 .timelights-book .misc-content .synopsis.field-value {
-	text-align: justify;
-	height: 60%;
+	height: 50%;
 	overflow-y: scroll;
+	/*text-align: justify;*/
+	/*text-align-last: center;*/
 }
 
 .timelights-book .misc-content .synopsis.field-value::-webkit-scrollbar {
@@ -276,29 +283,65 @@
 	outline: none;
 	color:#333;
 	border-radius: 2px;
-	float: right;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-	border-top: 2px solid #2ecc71;
+	/*border-top: 2px solid #2ecc71;*/
 	padding: 0 7px;
+	
+	position: relative;
+	overflow: hidden;
+	font-size: 1.3em;
 }
 
 .timelights-book .read {
+	
 	position: absolute;
 	margin: 0 auto;
 	display: block;
 	left: 0;
 	right: 0;
 	bottom: 9%;
+
 	width: 35%;
 	padding: 3px 5px;
 	font-size: 1.5em;
 	outline: none;
+
 	font-family: 'Roboto Condensed', 'Arial';
-	background:#1abc9c;
+	/*background:#1abc9c;*/ /* bluegreen */
+
+	background: #2ecc71;
 	color: #fff;
+
 	border: none;
 	border-radius: 3px;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+
 	cursor:pointer;
+	text-align: center;
+
+	background-position: center;
+	background: #47a7f5;
+	overflow: hidden;
+}
+.timelights-book .read:active > .ripple-wave {
+	animation: ripple 2s;
 }
 
+.timelights-book .ripple-wave {
+	position: absolute;
+	top: 0; bottom:0;
+	left: -50%; right: -50%;
+	margin: auto;
+	width: 200%;
+	height: 300%;
+	background-color: #fff;
+	opacity: 0.5;
+	border-radius: 300px;
+	transform: scale(0);
+}
+
+@keyframes ripple {
+	0% {transform: scale(0);}
+	15%{transform: scale(1);}
+	100%{transform: scale(1);opacity:0;}
+}
