@@ -2,7 +2,7 @@
  * Book.js
  * Author: JP Aguilar
  * Date created: 03 MAR 2018
- * Date modified: 18 MAR 2018
+ * Date modified: 23 MAR 2018
  * Email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
  *
  * Copyright (C) 2018 JP Aguilar
@@ -282,16 +282,23 @@
 	margin: auto;
 	display: none;
 	outline: none;
-	color:#333;
-	border-radius: 3px;
+	background: #bcbcbc;
+	color:#111;
+	/*border-radius: 3px;*/
+	border-radius: 100%;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	/*border-top: 2px solid #2ecc71;*/
-	padding: 0 10px;
+	/*padding: 9px 17px;*/
 	/*padding: 5px 20px;*/
-	position: relative;
+	position: absolute;
+	top: 40px;
+	left: 0; right: 0;
+	width: 2.5em; height: 2.5em;
+	margin: auto;
 	overflow: hidden;
 	text-align: center;
 	font-size: 1.3em;
+	font-family: 'Roboto Mono';
 }
 
 .timelights-book .read {
@@ -301,18 +308,18 @@
 	display: block;
 	left: 0;
 	right: 0;
-	bottom: 8.5%;
+	bottom: 7%;
 
 	width: 35%; max-width: 190px;
-	padding: 3px 5px;
+	padding: 5px;
 	font-size: 1.5em;
-	outline: none;
+	/*outline: none;*/
 
 	font-family: 'Roboto Condensed', 'Arial';
 	/*background:#1abc9c;*/ /* bluegreen */
 
-	background: #2ecc71;
-	color: #fff;
+	background: #3498db;
+	color: #eee;
 
 	border: none;
 	border-radius: 3px;
@@ -322,38 +329,27 @@
 	text-align: center;
 
 	background-position: center;
-	background: #47a7f5;
 }
-/* START: simple-ripple */
+/* START: ripple */
 .ripple {
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }
 
-.ripple:before {
-	content: '';
+.ripple-wave {
+	animation: ripple-effect 3s ease-out;
+
 	position:absolute;
-	top:0;
-	left:-30rem;
-	right:-30rem;
-	bottom:0;
 	margin: auto;
-	width: 30rem;
-	height: 30rem;
-	border-radius:100%;
+	border-radius: 100%;
 	opacity: 0.7;
 	transform:scale(0);
 	background:#fff;
 }
 
-.ripple.ripple-dark:before {
-	background:#333;
-}
-
-.ripple:not(:active):before {
-	/* will play animation after click */
-	/* :not(:active) = after click | default at page load */
-	animation: ripple-effect 1s ease-out;
+.ripple.ripple-dark > .ripple-wave {
+	background:#777;
 }
 
 @keyframes ripple-effect {
@@ -361,17 +357,4 @@
 	20% { transform: scale(1); }
 	100% { transform: scale(1); opacity: 0; }
 }
-
-/* default is :not(:active) so keyframe will play at page load */
-/* the 2 following style below will prevent that */
-
-.ripple:before {
-	visibility: hidden;
-}
-
-/* return the visibility when the button is in focus */
-
-.ripple:focus:before {
-	visibility: visible;
-}
-/* END: simple-ripple */
+/* END: ripple */
