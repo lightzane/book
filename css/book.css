@@ -338,7 +338,7 @@
 }
 
 .ripple-wave {
-	animation: ripple-effect 2s ease-out;
+	animation: ripple-effect 1s ease-out;
 
 	position:absolute;
 	margin: auto;
