@@ -1,8 +1,6 @@
 # Book
-Turns HTML contents into a simple book.
-<br>
-A simple book alike feel and look in a web application for reading text especially stories or novels.<br>
-Started the project by prioritizing **display** in _mobile_ apps.<br>
+Turns HTML contents into a simple book.\
+A simple book alike feel and look in a web application for reading text especially stories or novels.
 <br>
 
 >**Purpose**: Hope **booklovers** will love
@@ -13,16 +11,14 @@ Started the project by prioritizing **display** in _mobile_ apps.<br>
 email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 <br>
 
-#### MOBILE FIRST
-The display is first optimized for mobile devices.<br>
-Hence, not yet optimized for desktop.<br>
-Still in development...
+### Still in development...
 <br>
 
 ## # Features
 
 The book is default to have a memory and can store and remember the reader's last page.\
-This was done using **HTML5** ```localStorage```.
+This was done using **HTML5** ```localStorage```.\
+Book memory is still **unstable** in ```DESKTOP```!
 
 <br>
 
@@ -41,7 +37,7 @@ Control                     | Will Do
 ----------------------------|-------------------------------
 _click right_               | turns to ```next``` page
 _click left_                | turns to ```previous``` page
-_double click_              | brings back the book information panel
+~~_double click_~~          | ~~brings back the book information panel~~
 
 <br>
 
@@ -95,7 +91,7 @@ Your **Content** must follow the template that the ```Book``` can recognize.
 
 There are 2 types of content:
 - Image *(default)*
-- Text
+- Text **_(soon to be deprecated)_**
 
 ### Image Text as Content
 Contents must contain ```<img>``` 

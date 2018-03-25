@@ -2,7 +2,7 @@
  * Book.js
  * Author: JP Aguilar
  * Date created: 03 MAR 2018
- * Date modified: 23 MAR 2018
+ * Date modified: 25 MAR 2018
  * Email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
  *
  * Copyright (C) 2018 JP Aguilar
@@ -49,7 +49,7 @@
 	margin: 0;
 	padding: 0;
 
-	backface-visibility:hidden;
+	backface-visibility: hidden;
 	transform-origin:left;
 	transform-style:preserve-3d;
 	transition:transform 1s;
@@ -62,7 +62,7 @@
 	transition: all 0s ease 0s;
 }
 
-.timelights-book .page.old {
+.timelights-book .old {
 
 	background:#fff8da;
 	box-shadow: 
@@ -72,7 +72,7 @@
 
 }
 
-.timelights-book .page.white {
+/*.timelights-book .page.white {
 	background:#fff;
 	box-shadow:
 		inset 0 0 150px rgba(0,0,0,0.03),
@@ -85,14 +85,20 @@
 		inset 0 0 70px rgba(0,0,0,0.1),
 		inset 0 0 190px rgba(0,0,0,0.1),
 		0 0 250px rgba(0,0,0,0.5);
-}
+}*/
+
+.timelights-book .front { transform: rotateY(0deg) }
+.timelights-book .back { transform: rotateY(180deg) }
 
 .timelights-book .content {
 	height:90%;
-	overflow:hidden!important;
+	position:absolute;
+	overflow:hidden;
 	margin:1em 2.7em;
 	line-height:1.5em;
 	word-wrap:break-word;
+	backface-visibility:hidden;
+	top:0;
 }
 
 .timelights-book .content.image {
@@ -111,6 +117,10 @@
 	flex-flow: column wrap;
 	justify-content: center;
 	align-content: center;*/
+}
+
+.timelights-book .blank {
+	display:none;
 }
 
 /* title */
@@ -184,6 +194,7 @@
 	height:100%;
 	cursor: pointer;
 	/*background: black;*/
+	z-index:99998;
 }
 
 .timelights-book .turner-right {
@@ -192,6 +203,7 @@
 	width:30%;
 	height:100%;
 	cursor: pointer;
+	z-index:99998;
 	/*background: black;*/
 }
 
@@ -208,6 +220,7 @@
 	color: #333;
 	transition: transform 0.3s ease-out;
 	/*transform: translateY(100%);*/
+	z-index:99999;
 }
 
 .timelights-book .misc .progress {
@@ -265,7 +278,9 @@
 	overflow-y: scroll;
 	/*text-align: justify;*/
 	/*text-align-last: center;*/
+	margin: auto;
 	margin-top:5px;
+	max-width: 600px;
 }
 
 .timelights-book .misc-content .synopsis.field-value::-webkit-scrollbar {
@@ -349,7 +364,7 @@
 }
 
 .ripple.ripple-dark > .ripple-wave {
-	background:#333;
+	background:#777;
 }
 
 @keyframes ripple-effect {
