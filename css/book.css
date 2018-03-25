@@ -279,11 +279,13 @@
 .timelights-book .misc-up-arrow,
 .timelights-book .misc-return-arrow {
 	position: absolute;
-	top: -10.6%;
-	left: 3%;
-	padding: 1.3em;
+	padding: 1em;
+	top: -11%;
+	left: 2%;
+	font-size: 1.4em;
 	border-radius:100%;
 	cursor:pointer;
+	color: #777;
 }
 
 .timelights-book .misc-up-arrow {
@@ -292,15 +294,11 @@
 	display:none; /*dont show in mobile*/
 }
 
-.timelights-book .misc-return-arrow {
-	top: -4.2em;
-}
-
 .timelights-book .misc-2-up { /* the cog sort of look icon */
 	position: absolute;
 	padding: 1em;
 	top: -10.6%;
-	right: 0;
+	right: 2%;
 	font-size: 1.4em;
 	text-align: center;
 	border-radius:100%;
