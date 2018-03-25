@@ -44,13 +44,13 @@ _click left_                | turns to ```previous``` page
 ## # Pre-requisites
 **CSS**
 ```
-bootstrap.min.css
+bootstrap.min.css (v3.3.7)
 ```
 
 **Javascript**
 ```
 jquery-3.3.1.min.js
-bootstrap.min.js
+bootstrap.min.js (v3.3.7)
 ```
 <br>
 

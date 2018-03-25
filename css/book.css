@@ -123,6 +123,11 @@
 	display:none;
 }
 
+.timelights-book .black {
+	/*background: black;
+	box-shadow: none!important;*/
+}
+
 /* title */
 .timelights-book .content h1,
 .timelights-book .content h2,
@@ -196,6 +201,10 @@
 	/*background: black;*/
 	z-index:99998;
 }
+.timelights-book .turner-left:hover {
+	/*background: rgba(255,255,255,0.7);*/
+	box-shadow:inset 100px 0 100px rgba(246, 229, 141,1);
+}
 
 .timelights-book .turner-right {
 	position:absolute;
@@ -205,6 +214,9 @@
 	cursor: pointer;
 	z-index:99998;
 	/*background: black;*/
+}
+.timelights-book .turner-right:hover {
+	box-shadow:inset -100px 0 100px rgba(246, 229, 141,1);
 }
 
 .timelights-book .misc {
@@ -221,6 +233,7 @@
 	transition: transform 0.3s ease-out;
 	/*transform: translateY(100%);*/
 	z-index:99999;
+	overflow:hidden;
 }
 
 .timelights-book .misc .progress {
@@ -239,6 +252,7 @@
 	/*background:#3498db; */ /*darkblue*/
 	background: #7ed6df;
 	transition: width 0.5s;
+	overflow:hidden;
 }
 
 .timelights-book .misc .handle {
@@ -253,9 +267,45 @@
 	cursor:pointer;
 }
 
-.timelights-book .misc-content {
+.timelights-book .misc-content,
+.timelights-book .misc-content-2 {
 	padding: 3% 10%;
+	width:100%;
 	height: 90%;
+	transition: transform 0.3s ease-out;
+	position:absolute;
+}
+
+.timelights-book .misc-up-arrow,
+.timelights-book .misc-return-arrow {
+	position: absolute;
+	top: 0.6em;
+	left: 0.6em;
+	padding: 1.3em;
+	border-radius:100%;
+	cursor:pointer;
+}
+
+.timelights-book .misc-up-arrow {
+	transform-origin: center;
+	transform:rotate(90deg);
+	display:none; /*dont show in mobile*/
+}
+
+.timelights-book .misc-return-arrow {
+	top: -4.2em;
+}
+
+.timelights-book .misc-2-up { /* the cog sort of look icon */
+	position: absolute;
+	padding: 0.7em;
+	top: -2.8em;
+	right: 0.4em;
+	font-size: 1.4em;
+	text-align: center;
+	border-radius:100%;
+	cursor:pointer;
+	color: #777;
 }
 
 .timelights-book .misc-content .field {
@@ -292,6 +342,14 @@
 	background: rgba(0,0,0,0.1);
 }
 
+.timelights-book .misc-content-2 {
+	position:absolute;
+	bottom:0;
+	width: 100%;
+	background:#eee;
+	transform:translateX(100%)
+}
+
 .timelights-book .btn-gotopage {
 	border: none;
 	margin: auto;
@@ -299,14 +357,10 @@
 	outline: none;
 	background: #fff8da;
 	color: #111;
-	/*border-radius: 3px;*/
 	border-radius: 100%;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-	/*border-top: 2px solid #2ecc71;*/
-	/*padding: 9px 17px;*/
-	/*padding: 5px 20px;*/
 	position: absolute;
-	top: 35px;
+	top: -4.5%;
 	left: 0; right: 0;
 	width: 2.5em; height: 2.5em;
 	margin: auto;
