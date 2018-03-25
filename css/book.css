@@ -279,8 +279,8 @@
 .timelights-book .misc-up-arrow,
 .timelights-book .misc-return-arrow {
 	position: absolute;
-	top: 0.6em;
-	left: 0.6em;
+	top: -10.6%;
+	left: 3%;
 	padding: 1.3em;
 	border-radius:100%;
 	cursor:pointer;
@@ -298,9 +298,9 @@
 
 .timelights-book .misc-2-up { /* the cog sort of look icon */
 	position: absolute;
-	padding: 0.7em;
-	top: -2.8em;
-	right: 0.4em;
+	padding: 1em;
+	top: -10.6%;
+	right: 0;
 	font-size: 1.4em;
 	text-align: center;
 	border-radius:100%;
