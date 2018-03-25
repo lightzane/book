@@ -119,13 +119,12 @@
 	align-content: center;*/
 }
 
-.timelights-book .blank {
+.timelights-book .black { /*invisible page*/
 	display:none;
 }
 
-.timelights-book .black {
-	/*background: black;
-	box-shadow: none!important;*/
+.timelights-book .blank { /*actual blank page*/
+	
 }
 
 /* title */
@@ -232,8 +231,9 @@
 	color: #333;
 	transition: transform 0.3s ease-out;
 	/*transform: translateY(100%);*/
+	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	z-index:99999;
-	overflow:hidden;
+
 }
 
 .timelights-book .misc .progress {
@@ -244,6 +244,7 @@
 	width: 100%;
 
 	background: transparent;
+	z-index:99997;
 }
 
 .timelights-book .misc .progress .bar {
@@ -268,7 +269,7 @@
 }
 
 .timelights-book .misc-content,
-.timelights-book .misc-content-2 {
+.timelights-book .misc-content-share {
 	padding: 3% 10%;
 	width:100%;
 	height: 90%;
@@ -279,13 +280,19 @@
 .timelights-book .misc-up-arrow,
 .timelights-book .misc-return-arrow {
 	position: absolute;
-	padding: 1em;
-	top: -11%;
-	left: 2%;
-	font-size: 1.4em;
+	padding: 1.7em;
+	top: -9.7%;
+	left: 3%;
 	border-radius:100%;
 	cursor:pointer;
 	color: #777;
+}
+
+.timelights-book .misc-return-arrow {
+	background-image:url(../assets/ic_arrow_back_black_24px.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.5;
 }
 
 .timelights-book .misc-up-arrow {
@@ -294,16 +301,17 @@
 	display:none; /*dont show in mobile*/
 }
 
-.timelights-book .misc-2-up { /* the cog sort of look icon */
+.timelights-book .misc-share { 
+	background-image:url(../assets/ic_share_black_24px.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
 	position: absolute;
-	padding: 1em;
-	top: -10.6%;
-	right: 2%;
-	font-size: 1.4em;
-	text-align: center;
+	padding: 1.7em;
+	top: -9.7%;
+	right: 1%;
 	border-radius:100%;
 	cursor:pointer;
-	color: #777;
+	opacity: 0.5;
 }
 
 .timelights-book .misc-content .field {
@@ -340,7 +348,7 @@
 	background: rgba(0,0,0,0.1);
 }
 
-.timelights-book .misc-content-2 {
+.timelights-book .misc-content-share {
 	position:absolute;
 	bottom:0;
 	width: 100%;
