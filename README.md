@@ -187,6 +187,10 @@ Follow these guidelines if you are to create a text image as pages:
 
 Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly)
 
+## # Page Guidelines
+The last ```Even``` page is considered the back of the book.\
+If your last page is an ```Odd``` page, the book will generate a **blank** page as the last ```Even``` page (or the back of the book).
+
 <br>
 <br>
 
