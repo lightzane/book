@@ -281,7 +281,7 @@
 .timelights-book .misc-return-arrow {
 	position: absolute;
 	padding: 1.7em;
-	top: -9.7%;
+	top: -10%;
 	left: 3%;
 	border-radius:100%;
 	cursor:pointer;
@@ -307,7 +307,7 @@
 	background-position: center center;
 	position: absolute;
 	padding: 1.7em;
-	top: -9.7%;
+	top: -10%;
 	right: 1%;
 	border-radius:100%;
 	cursor:pointer;
