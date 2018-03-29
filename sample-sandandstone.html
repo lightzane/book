@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/book.css">
 </head>
-<body style="display:flex;flex-flow:column wrap;justify-content:center;align-content:center;background:#eee;background:linear-gradient(#eee,#F8EFBA)">
+<body style="display:flex;flex-flow:column wrap;justify-content:center;align-content:center;background:#eee;background:radial-gradient(#dfe6e9,#34495e)">
 
 	<div id="sample">
 		<div class="load"></div>
@@ -23,7 +23,7 @@
 			=title("Sand and Stone")
 			=synopsis("A sand and a stone depicts two person related to each other in life. Find out what happens between the two during their conflict.")
 
-			((SAND and STONE))=cover
+			<!-- ((SAND and STONE))=cover
 
 			(())=cover("to all whom I quarrel with...")
 			
@@ -44,10 +44,16 @@
 			The other friend replied, “When someone hurts us, we should write it down in sand where winds of forgiveness can erase it away. But, when someone does something good for us, we must engrave it in stone where no wind can ever erase it." 
 
 
-			(())=cover("Learn to write your hurts in the sand and to carve your benefits in stone.")
+			(())=cover("Learn to write your hurts in the sand and to carve your benefits in stone.") -->
 
 
-		</div>
+		</div> <!-- end: Text -->
+		<img src="pages/sandandstone/page-01.svg" data-page-number="nope"></img>
+		<img src="" data-page-number="nope"></img> <!-- BLANK PAGE -->
+		<img src="pages/sandandstone/page-02.svg" data-page-number="nope"></img>
+		<img src="pages/sandandstone/page-03.svg"></img>
+		<img src="pages/sandandstone/page-04.svg"></img>
+		<img src="pages/sandandstone/page-05.svg" data-page-number="nope"></img>
 	</div>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -56,7 +62,8 @@
 	<script>
 		
 		
-			$('#sample').book({imageText:false})
+			// $('#sample').book({imageText:false}) // do not use this as of 3/30/2018 !!!
+			$('#sample').book()
 		
 
 	</script>

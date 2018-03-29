@@ -79,7 +79,7 @@ So just wrap it up in another container to control your own ```width``` and ```h
 <div id="sample">
 	<div class="load"></div>
 	<div class="text">
-		<!-- Your Text Content Template Goes Here! -->
+		<!-- Your Content-Description Template Goes Here! -->
 	</div>
 </div>
 ```
@@ -99,12 +99,13 @@ Contents must contain ```<img>```
 <div id="sample">
 	<div class="load"></div>
 	<div class="text">
-		<!-- These 3 are OPTIONAL -->
 		=title("Your book title") 				<!-- default: "Untitled" -->
 		=author("Book author") 					<!-- default: "Anonymous" -->
 		=synopsis("About the book summary...") 	<!-- default: BLANK and will not be displayed -->
 	</div>
 	<img src="image-url-01.svg" data-page-number="nope"> <!-- no page number -->
+	<img src=""> <!-- blank page with page number -->
+	<img src="" data-page-number="nope"> <!-- blank page without page number -->
 	<img src="image-url-02.svg">
 	<img src="image-url-03.svg">
 </div>

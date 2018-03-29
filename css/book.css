@@ -2,7 +2,7 @@
  * Book.js
  * Author: JP Aguilar
  * Date created: 03 MAR 2018
- * Date modified: 25 MAR 2018
+ * Date modified: 30 MAR 2018
  * Email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
  *
  * Copyright (C) 2018 JP Aguilar
@@ -200,10 +200,9 @@
 	/*background: black;*/
 	z-index:99998;
 }
-.timelights-book .turner-left:hover {
-	/*background: rgba(255,255,255,0.7);*/
+/*.timelights-book .turner-left:hover {
 	box-shadow:inset 100px 0 100px rgba(246, 229, 141,1);
-}
+}*/
 
 .timelights-book .turner-right {
 	position:absolute;
@@ -214,40 +213,68 @@
 	z-index:99998;
 	/*background: black;*/
 }
-.timelights-book .turner-right:hover {
+/*.timelights-book .turner-right:hover {
 	box-shadow:inset -100px 0 100px rgba(246, 229, 141,1);
-}
+}*/
 
 .timelights-book .misc {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	padding: 0;
-	margin: 0;
+	left:0; right: 0;
+	bottom: 0;
+	margin: auto;
+
 	/*color:#fefeff;*/ /* light font */
 	/*background: #57606f;*/ /* dark background */
 	background: #eee;
 	/*color: #57606f;*/
 	color: #333;
-	transition: transform 0.3s ease-out;
+	transition: 0.3s;
 	/*transform: translateY(100%);*/
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	z-index:99999;
 
 }
 
-.timelights-book .misc .progress {
+.timelights-book .btn-misc-open {
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	position:relative;
+	top:99%;
+	background: #000;
+	border-radius: 100%;
+	opacity: 0.1;
+	/*box-shadow: 0 3px 5px rgba(0,0,0,0.3);*/
+	cursor:pointer;
+	transition: 0.3s ease-out;
+	transform:scale(0);
+}
+
+.timelights-book .btn-misc-open:hover {
+	background:#eee;
+	transform:scale(1);
+	opacity: 0.9;
+}
+
+.timelights-book .btn-misc-open--scale-03 {
+	transform:scale(0.3);
+}
+
+.timelights-book-progress {
 	position:absolute;
 	top: -3px;
 	
 	height: 3px;
 	width: 100%;
 
-	background: transparent;
+	background: none;
 	z-index:99997;
 }
 
-.timelights-book .misc .progress .bar {
+.timelights-book-progress .bar {
 	width:0%;
 	height: 100%;
 	/*background:#3498db; */ /*darkblue*/
@@ -263,7 +290,7 @@
 	padding: 0;
 	/*background: #2f3542;*/ /*dark background*/
 	background:#ddd;
-	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	/*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
 	text-align: center;
 	cursor:pointer;
 }
@@ -277,7 +304,7 @@
 	position:absolute;
 }
 
-.timelights-book .misc-up-arrow,
+/*.timelights-book .misc-up-arrow,*/
 .timelights-book .misc-return-arrow {
 	position: absolute;
 	padding: 1.7em;
@@ -295,11 +322,11 @@
 	opacity: 0.5;
 }
 
-.timelights-book .misc-up-arrow {
+/*.timelights-book .misc-up-arrow {
 	transform-origin: center;
 	transform:rotate(90deg);
-	display:none; /*dont show in mobile*/
-}
+	display:none; /*dont show in mobile
+}*/
 
 .timelights-book .misc-share { 
 	background-image:url(../assets/ic_share_black_24px.svg);
