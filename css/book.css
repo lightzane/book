@@ -253,7 +253,7 @@
 	transform:scale(0);
 }
 
-.timelights-book .btn-misc-open:hover {
+.timelights-book .btn-misc-open.btn-misc-open--scale-03:hover {
 	background:#eee;
 	transform:scale(1);
 	opacity: 0.9;
@@ -261,6 +261,14 @@
 
 .timelights-book .btn-misc-open--scale-03 {
 	transform:scale(0.3);
+	animation: anim--btn-misc-open 0.3s;
+	animation-iteration-count: 5;
+}
+
+@keyframes anim--btn-misc-open {
+	0% {background:#eee;opacity:1;}
+	50% {background:#000;opacity:0.1;}
+	100% {background:#eee;opacity:1;}
 }
 
 .timelights-book-progress {
@@ -452,6 +460,10 @@
 
 .ripple.ripple-dark > .ripple-wave {
 	background:#777;
+}
+
+.ripple.ripple-dim > .ripple-wave {
+	background:#aaa;
 }
 
 @keyframes ripple-effect {
