@@ -213,3 +213,6 @@ email: bhest.pat@gmail.com; jp.eaguilar@gmail.com
 
 
 [//]: # (Other font: https://github.com/adobe-fonts/source-han-serif/blob/release/OTF/Korean/SourceHanSerifK-Light.otf)
+
+[//]: # (AI add gradient to editable text:)
+[//]: # (https://www.youtube.com/watch?v=Wg1lL6tgq3c)
