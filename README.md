@@ -186,7 +186,7 @@ Follow these guidelines if you are to create a text image as pages:
 
 [//]: # ( Source Hans Serif - Korean Hangul font / 본명조 Light = 20pt)
 
-Reference: [The Butterfly](https://timelights.github.io/book/sample-thebutterfly)
+Reference: [The Butterfly](https://lightzane.github.io/book/sample-thebutterfly)
 
 ## # Page Guidelines
 The last ```Even``` page is considered the back of the book.\
